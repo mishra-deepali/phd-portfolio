@@ -1,20 +1,31 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaMapMarkerAlt, FaUniversity } from 'react-icons/fa';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  FaEnvelope,
+  FaLinkedin,
+  FaGithub,
+  FaTwitter,
+  FaMapMarkerAlt,
+  FaUniversity,
+} from "react-icons/fa";
 
 const ContactPage = () => {
   const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormState((prev) => ({
       ...prev,
@@ -25,7 +36,7 @@ const ContactPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setError('');
+    setError("");
 
     // Simulate form submission
     setTimeout(() => {
@@ -33,10 +44,10 @@ const ContactPage = () => {
       setIsSubmitted(true);
       // Reset form after submission
       setFormState({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       });
     }, 1500);
   };
@@ -44,39 +55,35 @@ const ContactPage = () => {
   const contactInfo = [
     {
       icon: <FaEnvelope className="text-primary" />,
-      label: 'Email',
-      value: 'scholar@example.edu',
-      link: 'mailto:scholar@example.edu',
+      label: "Email",
+      value: "st124434@ait.asia",
+      link: "mailto:st124434@ait.asia",
     },
     {
       icon: <FaUniversity className="text-primary" />,
-      label: 'Office',
-      value: 'Science Building, Room 305',
+      label: "Office",
+      value: "Asian Institute of Technology, Thailand",
       link: undefined,
     },
     {
       icon: <FaMapMarkerAlt className="text-primary" />,
-      label: 'Address',
-      value: 'University of Research, Research City, RC 12345',
-      link: 'https://maps.google.com',
+      label: "Address",
+      value:
+        "58 หมู่ที่ 9 Phahonyothin Rd, Tambon Khlong Nung, Amphoe Khlong Luang, Chang Wat Pathum Thani 12120, Thailand",
+      link: "https://maps.app.goo.gl/7yLYf2EW5qYcu65j9",
     },
   ];
 
   const socialLinks = [
     {
       icon: <FaLinkedin size={24} />,
-      label: 'LinkedIn',
-      link: 'https://linkedin.com',
+      label: "LinkedIn",
+      link: "www.linkedin.com/in/mishra-deepali",
     },
     {
       icon: <FaGithub size={24} />,
-      label: 'GitHub',
-      link: 'https://github.com',
-    },
-    {
-      icon: <FaTwitter size={24} />,
-      label: 'Twitter',
-      link: 'https://twitter.com',
+      label: "GitHub",
+      link: "https://github.com/mishra-deepali",
     },
   ];
 
@@ -89,9 +96,12 @@ const ContactPage = () => {
         transition={{ duration: 0.5 }}
         className="mb-16 text-center"
       >
-        <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">Contact Me</h1>
+        <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl">
+          Contact Me
+        </h1>
         <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
-          I'm always open to discussing research collaborations, speaking opportunities, or answering questions about my work.
+          I'm always open to discussing research collaborations, speaking
+          opportunities, or answering questions about my work.
         </p>
       </motion.div>
 
@@ -104,7 +114,9 @@ const ContactPage = () => {
           className="space-y-8 md:col-span-2"
         >
           <div className="rounded-lg border bg-card p-6 shadow-sm">
-            <h2 className="mb-6 text-2xl font-bold tracking-tight">Contact Information</h2>
+            <h2 className="mb-6 text-2xl font-bold tracking-tight">
+              Contact Information
+            </h2>
             <div className="space-y-6">
               {contactInfo.map((info) => (
                 <div key={info.label} className="flex items-start">
@@ -114,7 +126,9 @@ const ContactPage = () => {
                     {info.link ? (
                       <a
                         href={info.link}
-                        target={info.link.startsWith('mailto:') ? undefined : '_blank'}
+                        target={
+                          info.link.startsWith("mailto:") ? undefined : "_blank"
+                        }
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-primary hover:underline"
                       >
@@ -130,7 +144,9 @@ const ContactPage = () => {
           </div>
 
           <div className="rounded-lg border bg-card p-6 shadow-sm">
-            <h2 className="mb-6 text-2xl font-bold tracking-tight">Connect With Me</h2>
+            <h2 className="mb-6 text-2xl font-bold tracking-tight">
+              Connect With Me
+            </h2>
             <div className="flex flex-wrap gap-4">
               {socialLinks.map((social) => (
                 <a
@@ -148,8 +164,10 @@ const ContactPage = () => {
             </div>
           </div>
 
-          <div className="rounded-lg border bg-card p-6 shadow-sm">
-            <h2 className="mb-4 text-2xl font-bold tracking-tight">Office Hours</h2>
+          {/* <div className="rounded-lg border bg-card p-6 shadow-sm">
+            <h2 className="mb-4 text-2xl font-bold tracking-tight">
+              Office Hours
+            </h2>
             <ul className="space-y-2 text-muted-foreground">
               <li className="flex justify-between">
                 <span>Monday & Wednesday</span>
@@ -165,9 +183,10 @@ const ContactPage = () => {
               </li>
             </ul>
             <p className="mt-4 text-sm text-muted-foreground">
-              Please email me in advance to confirm availability or to schedule an appointment outside of regular office hours.
+              Please email me in advance to confirm availability or to schedule
+              an appointment outside of regular office hours.
             </p>
-          </div>
+          </div> */}
         </motion.div>
 
         {/* Contact Form */}
@@ -178,15 +197,22 @@ const ContactPage = () => {
           className="md:col-span-3"
         >
           <div className="rounded-lg border bg-card p-6 shadow-sm">
-            <h2 className="mb-6 text-2xl font-bold tracking-tight">Send Me a Message</h2>
+            <h2 className="mb-6 text-2xl font-bold tracking-tight">
+              Send Me a Message
+            </h2>
             {isSubmitted ? (
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 className="rounded-lg bg-primary/10 p-6 text-center"
               >
-                <h3 className="mb-2 text-xl font-semibold text-primary">Message Sent!</h3>
-                <p className="text-muted-foreground">Thank you for your message. I'll get back to you as soon as possible.</p>
+                <h3 className="mb-2 text-xl font-semibold text-primary">
+                  Message Sent!
+                </h3>
+                <p className="text-muted-foreground">
+                  Thank you for your message. I'll get back to you as soon as
+                  possible.
+                </p>
                 <button
                   type="button"
                   onClick={() => setIsSubmitted(false)}
@@ -242,8 +268,12 @@ const ContactPage = () => {
                     className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
                   >
                     <option value="">Select a subject</option>
-                    <option value="Research Collaboration">Research Collaboration</option>
-                    <option value="Speaking Engagement">Speaking Engagement</option>
+                    <option value="Research Collaboration">
+                      Research Collaboration
+                    </option>
+                    <option value="Speaking Engagement">
+                      Speaking Engagement
+                    </option>
                     <option value="Student Inquiry">Student Inquiry</option>
                     <option value="Other">Other</option>
                   </select>
@@ -269,7 +299,7 @@ const ContactPage = () => {
                   disabled={isSubmitting}
                   className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </button>
               </form>
             )}

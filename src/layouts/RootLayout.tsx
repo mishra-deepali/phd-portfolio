@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
-import { FiMenu, FiX } from 'react-icons/fi';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect } from "react";
+import { Link, Outlet, useLocation } from "react-router-dom";
+import { FiMenu, FiX } from "react-icons/fi";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 const RootLayout = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,24 +16,24 @@ const RootLayout = () => {
   // Handle scroll lock when menu is open
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isMenuOpen]);
 
   const navLinks = [
-    { name: 'About', path: '/' },
-    { name: 'Research', path: '/research' },
-    { name: 'Publications', path: '/publications' },
-    { name: 'News', path: '/news' },
-    { name: 'Teaching', path: '/teaching' },
-    { name: 'CV', path: '/cv' },
-    { name: 'Contact', path: '/contact' },
+    { name: "About", path: "/" },
+    { name: "Research", path: "/research" },
+    // { name: 'Publications', path: '/publications' },
+    // { name: "News", path: "/news" },
+    // { name: "Teaching", path: "/teaching" },
+    // { name: "CV", path: "/cv" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -57,7 +57,9 @@ const RootLayout = () => {
                   <Link
                     to={link.path}
                     className={`text-sm font-medium transition-colors hover:text-primary ${
-                      location.pathname === link.path ? 'text-primary' : 'text-foreground/70'
+                      location.pathname === link.path
+                        ? "text-primary"
+                        : "text-foreground/70"
                     }`}
                   >
                     {link.name}
@@ -71,7 +73,7 @@ const RootLayout = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="inline-flex h-10 w-10 items-center justify-center rounded-md text-foreground transition-colors hover:bg-accent hover:text-accent-foreground md:hidden"
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
             {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
           </button>
@@ -95,7 +97,9 @@ const RootLayout = () => {
                     <Link
                       to={link.path}
                       className={`text-xl font-medium transition-colors hover:text-primary ${
-                        location.pathname === link.path ? 'text-primary' : 'text-foreground/70'
+                        location.pathname === link.path
+                          ? "text-primary"
+                          : "text-foreground/70"
                       }`}
                     >
                       {link.name}
@@ -119,7 +123,8 @@ const RootLayout = () => {
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <div className="text-center md:text-left">
               <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} Deepali Mishra. All rights reserved.
+                © {new Date().getFullYear()} Deepali Mishra. All rights
+                reserved.
               </p>
             </div>
             <div className="flex items-center space-x-4">
