@@ -1,28 +1,42 @@
-import { motion } from 'framer-motion';
-import { FaLaptopCode, FaChartLine, FaBook, FaMicroscope, FaChalkboardTeacher } from 'react-icons/fa';
-import ProfileImage from '/images/profile-placeholder.jpg';
+import { motion } from "framer-motion";
+import {
+  FaLaptopCode,
+  FaChartLine,
+  FaBook,
+  FaMicroscope,
+  FaChalkboardTeacher,
+} from "react-icons/fa";
+import ProfileImage from "/images/profile-placeholder.jpg";
 const HomePage = () => {
   const skills = [
     {
-      title: 'Data Analysis',
+      title: "Data Analysis",
       icon: <FaChartLine className="h-8 w-8 text-primary" />,
-      description: 'Expertise in statistical analysis, data visualization, and research methodologies.',
+      description:
+        "Expertise in statistical analysis, data visualization, and research methodologies.",
     },
     {
-      title: 'Programming',
+      title: "Programming",
       icon: <FaLaptopCode className="h-8 w-8 text-primary" />,
-      description: 'Proficient in C++, core Java, Python.',
+      description: "Proficient in C++, core Java, Python.",
     },
     {
-      title: 'Academic Writing',
+      title: "Academic Writing",
       icon: <FaBook className="h-8 w-8 text-primary" />,
-      description: 'Experienced in writing research papers, grant proposals.',
+      description:
+        "Gaining experience in drafting research papers and grant proposals.",
     },
-    
+
     {
-      title: 'Teaching',
+      title: "Teaching",
       icon: <FaChalkboardTeacher className="h-8 w-8 text-primary" />,
-      description: 'Passionate about education with experience in course development and mentoring.',
+      description:
+        "Passionate about education with experience in course development and mentoring.",
+    },
+    {
+      title: "Languages",
+      icon: <FaChalkboardTeacher className="h-8 w-8 text-primary" />,
+      description: "Hindi, English",
     },
   ];
 
@@ -41,7 +55,8 @@ const HomePage = () => {
               <span className="block text-primary">Research Scholar</span>
             </h1>
             <p className="mb-8 text-xl text-muted-foreground">
-             Moving Toward Advanced Medical Solutions Through AI, Vision, and Language Understanding.
+              Moving Toward Advanced Medical Solutions Through AI, Vision, and
+              Language Understanding.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -86,16 +101,90 @@ const HomePage = () => {
           <h2 className="mb-6 text-3xl font-bold tracking-tight">About Me</h2>
           <div className="space-y-4 text-lg">
             <p>
-              Welcome to my academic portfolio! I am a passionate researcher with a PhD in [Your Field], dedicated to pushing the boundaries of knowledge through rigorous scientific inquiry.
+              Welcome to my academic portfolio! I am a passionate researcher
+              currently pursuing a dual PhD in Data Science and Artificial
+              Intelligence under the joint supervision of{" "}
+              <a
+                href="http://www.chaklam.com/"
+                target="_blank"
+                className="text-blue-600 hover:underline hover:text-blue-800"
+              >
+                Dr. Chaklam Silpasuwanchai
+              </a>{" "}
+              at the{" "}
+              <a
+                href="https://ait.ac.th/"
+                target="_blank"
+                className="text-blue-600 hover:underline hover:text-blue-800"
+              >
+                Asian Institute of Technology (AIT), Thailand,
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://ashutosh-modi.github.io/"
+                target="_blank"
+                className="text-blue-600 hover:underline hover:text-blue-800"
+              >
+                Dr. Ashutosh Modi
+              </a>{" "}
+              at the{" "}
+              <a
+                href="https://www.iitk.ac.in/"
+                target="_blank"
+                className="text-blue-600 hover:underline hover:text-blue-800"
+              >
+                Indian Institute of Technology (IIT) Kanpur, India
+              </a>{" "}
+              .
             </p>
             <p>
-              My research explores the intersection of [research topics], where I apply innovative methodologies to address complex challenges. With a background spanning [relevant disciplines], I bring a unique interdisciplinary perspective to my work.
+              My research lies at the intersection of computer vision, natural
+              language processing (NLP), multimodal learning, and medical
+              imaging. I am passionate about developing AI systems that are not
+              only technically sound but also usable, interpretable, and
+              impactful in real clinical workflows.
             </p>
             <p>
-              In addition to my research, I am committed to education and mentorship. I have taught courses at both undergraduate and graduate levels, and I enjoy guiding students on their academic journeys.
+              Currently, I am working on building AI-driven tools for medical
+              imaging and trauma classification, integrating multimodal learning
+              and expert medical knowledge. I collaborate closely with
+              clinicians and radiologists to ensure that the models we develop
+              are both relevant and practical for real-world use.
             </p>
             <p>
-              I am always open to collaboration opportunities and discussions about potential research projects. Please feel free to reach out through my contact page.
+              Prior to starting my PhD, I served as a Guest Lecturer at{" "}
+              <a
+                href="https://ecc.ac.in/"
+                target="_blank"
+                className="text-blue-600 hover:underline hover:text-blue-800"
+              >
+                Ewing Christian College, Allahabad, India
+              </a>{" "}
+              . During my tenure, I taught a range of multidisciplinary subjects
+              including Image Processing, Statistics, Basic Electronics, and
+              Computer Networking. This experience not only strengthened my
+              foundational knowledge across various domains but also enhanced my
+              ability to communicate complex technical concepts to diverse
+              student groups.
+            </p>
+            <p>
+              In addition to my research, I am committed to education and
+              mentorship. I enjoy mentoring students, collaborating on
+              interdisciplinary projects, and guiding learners on their academic
+              journeys. Teaching has played a vital role in shaping my approach
+              to research and fostering a deeper appreciation for human-centered
+              technology.
+            </p>
+            <p>
+              I am also deeply interested in science communication, academic
+              writing, and bridging the gap between technology and society. My
+              work is driven by a vision to create responsible AI that serves
+              both clinicians and patients.
+            </p>
+            <p>
+              I am always open to collaboration opportunities and discussions
+              about potential research projects. Please feel free to reach out
+              through my contact page.
             </p>
           </div>
         </motion.div>
@@ -104,7 +193,9 @@ const HomePage = () => {
       {/* Skills Section */}
       <section>
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-10 text-center text-3xl font-bold tracking-tight">Skills & Expertise</h2>
+          <h2 className="mb-10 text-center text-3xl font-bold tracking-tight">
+            Skills & Expertise
+          </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {skills.map((skill, index) => (
               <motion.div
