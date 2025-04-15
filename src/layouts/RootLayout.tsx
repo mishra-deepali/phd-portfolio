@@ -46,7 +46,7 @@ const RootLayout = () => {
             to="/"
             className="flex items-center space-x-2 text-xl font-bold text-primary transition-colors hover:text-primary/80"
           >
-            <span>Dr. Scholar</span>
+            <span>Deepali Mishra</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -119,7 +119,7 @@ const RootLayout = () => {
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <div className="text-center md:text-left">
               <p className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} Dr. Scholar. All rights reserved.
+                © {new Date().getFullYear()} Deepali Mishra. All rights reserved.
               </p>
             </div>
             <div className="flex items-center space-x-4">

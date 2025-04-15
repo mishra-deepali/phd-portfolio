@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaLaptopCode, FaChartLine, FaBook, FaMicroscope, FaChalkboardTeacher } from 'react-icons/fa';
-
+import ProfileImage from '/images/profile-placeholder.jpg';
 const HomePage = () => {
   const skills = [
     {
@@ -11,18 +11,14 @@ const HomePage = () => {
     {
       title: 'Programming',
       icon: <FaLaptopCode className="h-8 w-8 text-primary" />,
-      description: 'Proficient in Python, R, MATLAB, and various scientific computing frameworks.',
+      description: 'Proficient in C++, core Java, Python.',
     },
     {
       title: 'Academic Writing',
       icon: <FaBook className="h-8 w-8 text-primary" />,
-      description: 'Experienced in writing research papers, grant proposals, and technical documentation.',
+      description: 'Experienced in writing research papers, grant proposals.',
     },
-    {
-      title: 'Laboratory Techniques',
-      icon: <FaMicroscope className="h-8 w-8 text-primary" />,
-      description: 'Skilled in various laboratory methods and experimental design approaches.',
-    },
+    
     {
       title: 'Teaching',
       icon: <FaChalkboardTeacher className="h-8 w-8 text-primary" />,
@@ -41,11 +37,11 @@ const HomePage = () => {
             transition={{ duration: 0.5 }}
           >
             <h1 className="mb-4 text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-              <span className="block text-foreground">Dr. Scholar</span>
-              <span className="block text-primary">PhD Researcher</span>
+              <span className="block text-foreground">Deepali Mishra</span>
+              <span className="block text-primary">Research Scholar</span>
             </h1>
             <p className="mb-8 text-xl text-muted-foreground">
-              Advancing knowledge through innovative research and interdisciplinary collaboration.
+             Moving Toward Advanced Medical Solutions Through AI, Vision, and Language Understanding.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -70,8 +66,8 @@ const HomePage = () => {
           >
             <div className="overflow-hidden rounded-full border-4 border-primary shadow-xl">
               <img
-                src="/images/profile-placeholder.png"
-                alt="Dr. Scholar"
+                src={ProfileImage}
+                alt="Deepali Mishra"
                 className="h-64 w-64 object-cover sm:h-80 sm:w-80"
               />
             </div>
